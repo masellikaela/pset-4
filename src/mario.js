@@ -4,3 +4,5 @@ const MAX = 24;
 const MIN = 1;
 
 let height = Number(readlineSync.question("\nHeight: "));
+
+while 
