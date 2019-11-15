@@ -6,7 +6,8 @@ const MIN = Number.MIN_SAFE_INTEGER;
 let lowerBound = 1;
 let upperBound = -1;
 
-while (lowerBound > upperBound || Number.isNaN(lowerBound) || Number.isNaN(upperBound)) {
+console.log();
+while (lowerBound > upperBound || Number.isNaN(lowerBound) || Number.isNaN(upperBound) || !Number.isInteger(lowerBound) || !Number.isInteger(upperBound) || lowerBound < MIN || upperBound > MAX) {
   lowerBound = Number(readlineSync.question("Lower bound: "));
   upperBound = Number(readlineSync.question("Upper bound: "));
 }
