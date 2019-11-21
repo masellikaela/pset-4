@@ -6,7 +6,7 @@ const MIN = 1;
 let positiveInteger= -1
 
 console.log();
-while (positiveInteger<=0 || Number.isNaN(positiveInteger) ||  !Number.isInteger(positiveInteger) || positiveInteger < MIN || positiveInteger > MAX) {
+while (positiveInteger<0 || Number.isNaN(positiveInteger) ||  !Number.isInteger(positiveInteger) || positiveInteger < MIN || positiveInteger > MAX) {
    positiveInteger = Number(readlineSync.question("Positive integer: "));
 }
 
