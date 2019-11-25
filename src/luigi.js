@@ -1,7 +1,6 @@
 const readlineSync = require("readline-sync");
 
 let height = 0;
-let space = "##";
 let opposite = "##"
 
 console.log("");
@@ -22,8 +21,9 @@ while (thirdHeight > 1) {
       opposite = opposite + " "
       --thirdHeight
 }
-
 console.log("\n" + space + "  " + opposite)
+
+let space = "##";
 
 while (height > 1) {
     let firstSpace = space.replace(" #", "##")

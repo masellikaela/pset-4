@@ -12,7 +12,7 @@ let done = false;
 while (!done) {
   const value = Number(readlineSync.question("Non-negative integer: "));
 
-  if (Number.isNaN(value)) {
+  if (Number.isNaN(value) {
     // ignore
   } else if (!Number.isInteger(value)) {
     // ignore

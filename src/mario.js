@@ -16,7 +16,7 @@ let secondHeight = height;
 
 while (secondHeight > 1) {
       space = " " + space
-    --secongHeight
+    --secondHeight
 }
 
 console.log("\n" + space)
