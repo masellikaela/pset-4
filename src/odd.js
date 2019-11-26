@@ -19,4 +19,4 @@ while (positiveInteger > 0) {
     sum = sum + digit
   }
 }
-console.log(`\n${sum}.`)
+console.log(`\n${sum}.\n`)
