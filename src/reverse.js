@@ -23,4 +23,4 @@ while (positiveInteger > 0) {
   }
 }
 
-console.log("\n" + str);
+console.log("\n" + str "\n");
