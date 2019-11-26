@@ -1,30 +1,27 @@
 const readlineSync = require("readline-sync");
 
-const MAX = 24;
-const MIN = 1;
-
-let height = 0
-let space = "##";
+var theHeight = 0;
+var space = "##";
 
 console.log("");
 
 do {
-      height = Number(readlineSync.question("Height: "));
-} while (height < 1 || height > 24 || Number.isNaN(height) || !Number.isInteger(height));
+      theHeight = Number(readlineSync.question("Height: "));
+} while (theHeight < 1 || theHeight > 24 || Number.isNaN(theHeight) || !Number.isInteger(theHeight));
 
-let secondHeight = height;
+var theHeight2 = theHeight;
 
-while (secondHeight > 1) {
+while (theHeight2 > 1) {
       space = " " + space
-    --secondHeight
+    --theHeight2
 }
 
 console.log("\n" + space)
 
-while (height > 1) {
-    let firstSpace = space.replace(" #", "##")
-    console.log(firstSpace)
-    --height
-    let space = firstSpace
+while (theHeight > 1) {
+    var space1 = space.replace(" #", "##")
+    console.log(space1)
+    --theHeight
+    var space = space1
 }
 console.log()
