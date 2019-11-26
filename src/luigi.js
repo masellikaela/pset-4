@@ -1,7 +1,8 @@
 const readlineSync = require("readline-sync");
 
-let height = 0;
-let opposite = "##"
+var height = 0;
+var space = "##";
+var opposite = "##"
 
 console.log("");
 
@@ -9,29 +10,29 @@ do {
       height = Number(readlineSync.question("Height: "));
 } while (height < 1 || height > 24 || Number.isNaN(height) || !Number.isInteger(height));
 
-let secondHeight = height;
-let thirdHeight = height;
+var height2 = height;
+var height3 = height;
 
-while (secondHeight > 1) {
+while (height2 > 1) {
       space = " " + space
-      --secondHeight
+      --height2
 }
 
-while (thirdHeight > 1) {
+while (height3 > 1) {
       opposite = opposite + " "
-      --thirdHeight
+      --height3
 }
+
 console.log("\n" + space + "  " + opposite)
 
-let space = "##";
-
 while (height > 1) {
-    let firstSpace = space.replace(" #", "##")
-    let firstOpposite = opposite.replace("# ", "##")
+    var space1 = space.replace(" #", "##")
+    var opposite1 = opposite.replace("# ", "##")
 
-    console.log(firstSpace + "  " + firstOpposite)
+    console.log(space1 + "  " + opposite1)
     --height
 
-    let space = firstSpace
-    let opposite = firstOpposite
+    var space = space1
+    var opposite = opposite1
 }
+console.log("")
