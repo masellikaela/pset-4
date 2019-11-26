@@ -20,4 +20,4 @@ for (let i = lowerBound; i <= upperBound; i++) {
     }
 }
 
-console.log(`\n${sum.toLocaleString()}.`);
+console.log(`\n${sum.toLocaleString()}.\n`);
