@@ -1,31 +1,27 @@
 const readlineSync = require("readline-sync");
 
-const MAX = Number.MAX_SAFE_INTEGER;
-const MIN = 0;
+let integer = 0;
+let space = "";
+let x = 2;
 
-console.log()
+console.log("");
 
-let done = false;
-let value = 0
+do {
+      integer = Number(readlineSync.question("Non-negative integer: "));
+} while (integer < 0 || integer > Number.MAX_SAFE_INTEGER || Number.isNaN(integer) || !Number.isInteger(integer));
 
-while (!done) {
-  const value = Number(readlineSync.question("Non-negative integer: "));
+while (x < integer) {
 
-  if (Number.isNaN(value)) {
-    // ignore
-  } else if (!Number.isInteger(value)) {
-    // ignore
-  } else if (!Number.isSafeInteger(value)) {
-    // ignore
-  } else {
-       for (let i = 2; i <= Math.sqrt(input); i++) {
-         if (input % i == 0) {
-
-    if () {
-
+    if (integer % x === 0 && x !== integer) {
+        console.log("\nNot prime.\n")
+        break;
+    } else if (integer % x !== 0) {
+        x++
     } else {
-      console.log("Not prime.")
-
+        break;
     }
+}
 
-  }
+if (x >= integer) {
+  console.log("\nPrime.\n");
+}
